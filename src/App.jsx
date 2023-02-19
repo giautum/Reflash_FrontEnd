@@ -1,22 +1,15 @@
 import {Link} from 'react-router-dom';
 //import './Start.css';
 //import CreateAccount from "./NewAccount";
-import { AuthenticationTitle} from './loginform';
+import {LoginPage} from './loginform';
+import { ForgotPassword } from './ForgotPassword';
 
 function Start() {
   console.log ("Start");
   return (
-    <AuthenticationTitle />
+    <LoginPage />
 
   );
 }
 export default Start;
-
-function CreateAccButton() {
-    return (
-        <Link to="./NewAccount">
-            <button>create account</button>
-        </Link>
-    );
-}
 
