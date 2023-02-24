@@ -11,7 +11,7 @@ import {
     Button,
   } from '@mantine/core';
 import { ForgotPassword } from './ForgotPassword';
-import { Link } from 'react-router-dom';
+//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
   
   export function LoginPage() {
@@ -34,7 +34,7 @@ import { Link } from 'react-router-dom';
           <Group position="apart" mt="lg">
             <Checkbox label="Remember me" sx={{ lineHeight: 1 }} />
             <Anchor onClick={(event) => event.onClick(ForgotPassword)} href="#" size="sm">
-              <Link to="/ForgotPassword">forgot password?</Link>
+              Forgot password?
             </Anchor>
           </Group>
           <Button fullWidth mt="xl">
