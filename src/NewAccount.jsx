@@ -1,4 +1,38 @@
-//import './Start.css';
+import {
+    createStyles,
+    Paper,
+    Title,
+    Text,
+    TextInput,
+    Button,
+    Container,
+    Group,
+    Anchor,
+    Center,
+    Box,
+  } from '@mantine/core';
+  import { IconArrowLeft } from '@tabler/icons';
+  
+  const useStyles = createStyles((theme) => ({
+    title: {
+      fontSize: 26,
+      fontWeight: 900,
+      fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    },
+  
+    controls: {
+      [theme.fn.smallerThan('xs')]: {
+        flexDirection: 'column-reverse',
+      },
+    },
+  
+    control: {
+      [theme.fn.smallerThan('xs')]: {
+        width: '100%',
+        textAlign: 'center',
+      },
+    },
+  }));
 
 
 function CreateAccount() {

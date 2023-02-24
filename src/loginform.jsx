@@ -10,11 +10,34 @@ import {
     Group,
     Button,
   } from '@mantine/core';
+import React from 'react';
+//import { CreateAccount } from './NewAccount';
 import { ForgotPassword } from './ForgotPassword';
 //import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
   
   export function LoginPage() {
+    const handleCreateAccount = () => {
+      console.log("Create account");
+      return (
+        <CreateAccount />
+      );
+    }
+
+    const handleForgotPassword = () => {
+      console.log("Forgot password");
+
+      return (
+        <ForgotPassword />
+      );
+
+    }
+
+    const handleSignIn = () => {
+      console.log("Sign in");
+    }
+
+
     return (  
         <Container size={420} my={40} align="center">
         <Title
@@ -24,7 +47,7 @@ import { ForgotPassword } from './ForgotPassword';
           Reflash!
         </Title>
         <Text color="dimmed" size="sm" align="center" mt={5}>
-          <Anchor href="#" size="sm" onClick={(event) => event.preventDefault()}>
+          <Anchor href="#" size="sm" onClick={handleCreateAccount}>
             Create account
           </Anchor>
         </Text>
@@ -33,11 +56,11 @@ import { ForgotPassword } from './ForgotPassword';
           <PasswordInput label="Password" placeholder="password" required mt="md" />
           <Group position="apart" mt="lg">
             <Checkbox label="Remember me" sx={{ lineHeight: 1 }} />
-            <Anchor onClick={(event) => event.onClick(ForgotPassword)} href="#" size="sm">
+            <Anchor onClick={handleForgotPassword} href="#" size="sm">
               Forgot password?
             </Anchor>
           </Group>
-          <Button fullWidth mt="xl">
+          <Button onClick={handleSignIn} fullWidth mt="xl">
             Sign in
           </Button>
         </Paper>
